@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NovaCart - Everything You Need, In One Place</title>
+  <meta name="description" content="NovaCart is a modern e-commerce storefront for visual regression testing baseline runs.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="home">
+
+  <!-- =======================================================================
+       Navigation Bar
+       ======================================================================= -->
+  <header class="navbar" data-testid="navbar">
+    <div class="container">
+      <div class="nav-header-row">
+        <a href="index.html" class="nav-brand" data-testid="nav-brand">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          Nova<span>Cart</span>
+        </a>
+      </div>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link active" data-testid="nav-home">Home</a></li>
+          <li><a href="products.html" class="nav-link" data-testid="nav-products">Products</a></li>
+          <li><a href="contact.html" class="nav-link" data-testid="nav-contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="cart-button" data-testid="nav-cart" aria-label="Shopping Cart">
+          <svg class="cart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span>Cart</span>
+          <span class="cart-count" data-testid="cart-count">0</span>
+        </button>
+        <button class="btn btn-outline btn-sm" data-testid="login-btn">Login</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- =======================================================================
+         Hero Section
+         ======================================================================= -->
+    <section class="hero" data-testid="hero-section">
+      <div class="container">
+        <div class="hero-content">
+          <span class="hero-badge">Curated Quality Guaranteed</span>
+          <h1 class="hero-title">Everything You Need, In One Place</h1>
+          <p class="hero-description">
+            Discover curated premium products from electronics to everyday essentials with guaranteed quality, deterministic pricing, and lightning-fast delivery.
+          </p>
+          <div class="hero-actions">
+            <a href="products.html" class="btn btn-primary" data-testid="hero-shop-btn">Shop Now</a>
+            <a href="contact.html" class="btn btn-outline">Contact Us</a>
+          </div>
+        </div>
+
+        <div class="hero-illustration" data-testid="hero-illustration">
+          <div class="hero-card-preview">
+            <div class="preview-header">
+              <div class="preview-chip"></div>
+              <span class="preview-status">Featured Item</span>
+            </div>
+            <div class="preview-graphic">
+              <svg width="54" height="54" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+              <span class="preview-graphic-caption">Smart Workspace Display</span>
+            </div>
+            <div class="preview-details">
+              <div>
+                <div class="preview-price">$299.99</div>
+                <div style="font-size: 0.8rem; color: var(--text-muted);">In Stock & Ready to Ship</div>
+              </div>
+              <div class="preview-rating">★ 4.9 (310)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         Featured Products Section
+         ======================================================================= -->
+    <section class="section" data-testid="featured-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Featured Products</h2>
+          <p class="section-subtitle">Hand-picked essentials designed for durability and performance</p>
+        </div>
+
+        <div class="product-grid" data-testid="featured-grid">
+          <!-- Featured Product 1 -->
+          <article class="product-card" data-testid="product-card" data-category="electronics">
+            <div class="product-image">
+              <span class="product-badge">Top Seller</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
+                <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path>
+              </svg>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Electronics</span>
+              <h3 class="product-name">Wireless Noise-Canceling Headphones</h3>
+              <div class="product-rating rating">
+                <span class="rating-stars">★★★★★</span>
+                <span>4.8 (95)</span>
+              </div>
+              <div class="product-bottom">
+                <span class="price">$149.99</span>
+                <button class="btn btn-primary btn-sm" data-testid="add-to-cart">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Featured Product 2 -->
+          <article class="product-card" data-testid="product-card" data-category="electronics">
+            <div class="product-image">
+              <span class="product-badge">Popular</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                <line x1="6" y1="8" x2="6.01" y2="8"></line>
+                <line x1="10" y1="8" x2="10.01" y2="8"></line>
+                <line x1="14" y1="8" x2="14.01" y2="8"></line>
+                <line x1="18" y1="8" x2="18.01" y2="8"></line>
+                <line x1="6" y1="12" x2="6.01" y2="12"></line>
+                <line x1="10" y1="12" x2="10.01" y2="12"></line>
+                <line x1="14" y1="12" x2="14.01" y2="12"></line>
+                <line x1="18" y1="12" x2="18.01" y2="12"></line>
+                <line x1="7" y1="16" x2="17" y2="16"></line>
+              </svg>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Electronics</span>
+              <h3 class="product-name">Mechanical Gaming Keyboard</h3>
+              <div class="product-rating rating">
+                <span class="rating-stars">★★★★★</span>
+                <span>4.7 (120)</span>
+              </div>
+              <div class="product-bottom">
+                <span class="price">$89.99</span>
+                <button class="btn btn-primary btn-sm" data-testid="add-to-cart">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Featured Product 3 -->
+          <article class="product-card" data-testid="product-card" data-category="fashion">
+            <div class="product-image">
+              <span class="product-badge">New Arrival</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20.38 3.46L16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"></path>
+              </svg>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Fashion</span>
+              <h3 class="product-name">Classic Cotton Denim Jacket</h3>
+              <div class="product-rating rating">
+                <span class="rating-stars">★★★★☆</span>
+                <span>4.5 (64)</span>
+              </div>
+              <div class="product-bottom">
+                <span class="price">$79.99</span>
+                <button class="btn btn-primary btn-sm" data-testid="add-to-cart">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         Benefits Section
+         ======================================================================= -->
+    <section class="section section-alt" data-testid="benefits-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Why Choose NovaCart</h2>
+          <p class="section-subtitle">Reliable e-commerce infrastructure built for peace of mind</p>
+        </div>
+
+        <div class="benefits-grid">
+          <!-- Benefit 1 -->
+          <div class="benefit-card" data-testid="benefit-fast-delivery">
+            <div class="benefit-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="1" y="3" width="15" height="13"></rect>
+                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                <circle cx="18.5" cy="18.5" r="2.5"></circle>
+              </svg>
+            </div>
+            <h3 class="benefit-title">Fast Delivery</h3>
+            <p class="benefit-description">
+              Prompt 2-day standard shipping on all orders with real-time tracking from dispatch to doorstep.
+            </p>
+          </div>
+
+          <!-- Benefit 2 -->
+          <div class="benefit-card" data-testid="benefit-secure-payment">
+            <div class="benefit-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+            </div>
+            <h3 class="benefit-title">Secure Payment</h3>
+            <p class="benefit-description">
+              Industry-standard end-to-end encryption ensuring your payment and personal credentials are always protected.
+            </p>
+          </div>
+
+          <!-- Benefit 3 -->
+          <div class="benefit-card" data-testid="benefit-easy-returns">
+            <div class="benefit-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="1 4 1 10 7 10"></polyline>
+                <polyline points="23 20 23 14 17 14"></polyline>
+                <path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"></path>
+              </svg>
+            </div>
+            <h3 class="benefit-title">Easy Returns</h3>
+            <p class="benefit-description">
+              Hassle-free 30-day money-back guarantee with prepaid return labels and simple online processing.
+            </p>
+          </div>
+        </div>
+
+        <!-- Promotional Banner -->
+        <div class="promo-banner" data-testid="promo-banner">
+          <div class="promo-content">
+            <h3>Special Seasonal Offer</h3>
+            <p>Enjoy 15% off orders over $75 when you apply coupon code <span class="promo-code">NOVA15</span> at checkout.</p>
+          </div>
+          <a href="products.html" class="btn btn-promo" data-testid="promo-shop-btn">Explore Deals</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =======================================================================
+       Footer
+       ======================================================================= -->
+  <footer class="footer" data-testid="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="nav-brand">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="9" cy="21" r="1"></circle>
+              <circle cx="20" cy="21" r="1"></circle>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
+            Nova<span>Cart</span>
+          </div>
+          <p>
+            Deterministic e-commerce target website designed specifically for visual regression testing using Playwright and Resemble.js.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">All Products</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Categories</h4>
+          <ul class="footer-links">
+            <li><a href="products.html">Electronics</a></li>
+            <li><a href="products.html">Fashion</a></li>
+            <li><a href="products.html">Accessories</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Customer Care</h4>
+          <ul class="footer-links">
+            <li><a href="contact.html">Help & FAQ</a></li>
+            <li><a href="contact.html">Shipping Details</a></li>
+            <li><a href="contact.html">Return Policy</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 NovaCart Demo Inc. All rights reserved.</span>
+        <span class="footer-testing-note">Target: Visual Regression Baseline</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

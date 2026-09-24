@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NovaCart - Our Products</title>
+  <meta name="description" content="Explore NovaCart's deterministic product catalogue for visual regression test baselines.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="products">
+
+  <!-- =======================================================================
+       Navigation Bar
+       ======================================================================= -->
+  <header class="navbar" data-testid="navbar">
+    <div class="container">
+      <div class="nav-header-row">
+        <a href="index.html" class="nav-brand" data-testid="nav-brand">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          Nova<span>Cart</span>
+        </a>
+      </div>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link" data-testid="nav-home">Home</a></li>
+          <li><a href="products.html" class="nav-link active" data-testid="nav-products">Products</a></li>
+          <li><a href="contact.html" class="nav-link" data-testid="nav-contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="cart-button" data-testid="nav-cart" aria-label="Shopping Cart">
+          <svg class="cart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span>Cart</span>
+          <span class="cart-count" data-testid="cart-count">0</span>
+        </button>
+        <button class="btn btn-outline btn-sm" data-testid="login-btn">Login</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" data-testid="products-section">
+      <div class="container">
+        <!-- Page Heading -->
+        <div class="section-header">
+          <h1 class="section-title">Our Products</h1>
+          <p class="section-subtitle">Browse our deterministic catalog with live client-side search and filtering</p>
+        </div>
+
+        <!-- Controls: Search & Category Filters -->
+        <div class="products-controls" data-testid="products-controls">
+          <!-- Search Input -->
+          <div class="search-box">
+            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input
+              type="text"
+              class="search-input"
+              data-testid="search-input"
+              placeholder="Search products by title..."
+              aria-label="Search products"
+            >
+          </div>
+
+          <!-- Category Filter Buttons -->
+          <div class="category-filters" data-testid="category-filter-group">
+            <span class="category-label">Filter Category:</span>
+            <button class="filter-btn active" data-testid="category-filter" data-category="all">All</button>
+            <button class="filter-btn" data-testid="category-filter" data-category="electronics">Electronics</button>
+            <button class="filter-btn" data-testid="category-filter" data-category="fashion">Fashion</button>
+            <button class="filter-btn" data-testid="category-filter" data-category="accessories">Accessories</button>
+          </div>
+        </div>
+
+        <!-- No Results Message -->
+        <div id="no-results" class="no-results" data-testid="no-results">
+          <h3>No matching products found</h3>
+          <p>Try searching for a different keyword or select another category filter.</p>
+        </div>
+
+        <!-- Product Grid (6 Products) -->
+        <div class="product-grid" data-testid="product-grid">
+          <!-- Product 1: Headphones (Electronics) -->
+          <article class="product-card" data-testid="product-card" data-category="electronics">
+            <div class="product-image">
+              <span class="product-badge">Electronics</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
+                <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path>
+              </svg>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Electronics</span>
+              <h3 class="product-name">Wireless Noise-Canceling Headphones</h3>
+              <div class="product-rating rating">
+                <span class="rating-stars">★★★★★</span>
+                <span>4.8 (95)</span>
+              </div>
+              <div class="product-bottom">
+                <span class="price">$149.99</span>
+                <button class="btn btn-primary btn-sm" data-testid="add-to-cart">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 2: Keyboard (Electronics) -->
+          <article class="product-card" data-testid="product-card" data-category="electronics">
+            <div class="product-image">
+              <span class="product-badge">Electronics</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                <line x1="6" y1="8" x2="6.01" y2="8"></line>
+                <line x1="10" y1="8" x2="10.01" y2="8"></line>
+                <line x1="14" y1="8" x2="14.01" y2="8"></line>
+                <line x1="18" y1="8" x2="18.01" y2="8"></line>
+                <line x1="6" y1="12" x2="6.01" y2="12"></line>
+                <line x1="10" y1="12" x2="10.01" y2="12"></line>
+                <line x1="14" y1="12" x2="14.01" y2="12"></line>
+                <line x1="18" y1="12" x2="18.01" y2="12"></line>
+                <line x1="7" y1="16" x2="17" y2="16"></line>
+              </svg>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Electronics</span>
+              <h3 class="product-name">Mechanical Gaming Keyboard</h3>
+              <div class="product-rating rating">
+                <span class="rating-stars">★★★★★</span>
+                <span>4.7 (120)</span>
+              </div>
+              <div class="product-bottom">
+                <span class="price">$89.99</span>
+                <button class="btn btn-primary btn-sm" data-testid="add-to-cart">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 3: Denim Jacket (Fashion) -->
+          <article class="product-card" data-testid="product-card" data-category="fashion">
+            <div class="product-image">
+              <span class="product-badge">Fashion</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20.38 3.46L16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"></path>
+              </svg>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Fashion</span>
+              <h3 class="product-name">Classic Cotton Denim Jacket</h3>
+              <div class="product-rating rating">
+                <span class="rating-stars">★★★★☆</span>
+                <span>4.5 (64)</span>
+              </div>
+              <div class="product-bottom">
+                <span class="price">$79.99</span>
+                <button class="btn btn-primary btn-sm" data-testid="add-to-cart">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 4: Running Shoes (Fashion) -->
+          <article class="product-card" data-testid="product-card" data-category="fashion">
+            <div class="product-image">
+              <span class="product-badge">Fashion</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 18l5-1 4 2 7-3-2-6-5 1-4-2-4 2-1 7z"></path>
+                <line x1="2" y1="20" x2="22" y2="20"></line>
+              </svg>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Fashion</span>
+              <h3 class="product-name">Breathable Athletic Running Shoes</h3>
+              <div class="product-rating rating">
+                <span class="rating-stars">★★★★★</span>
+                <span>4.9 (210)</span>
+              </div>
+              <div class="product-bottom">
+                <span class="price">$119.99</span>
+                <button class="btn btn-primary btn-sm" data-testid="add-to-cart">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 5: Leather Backpack (Accessories) -->
+          <article class="product-card" data-testid="product-card" data-category="accessories">
+            <div class="product-image">
+              <span class="product-badge">Accessories</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 10a7 7 0 0 1 14 0v10a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V10z"></path>
+                <path d="M9 10V6a3 3 0 0 1 6 0v4"></path>
+                <line x1="9" y1="15" x2="15" y2="15"></line>
+              </svg>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Accessories</span>
+              <h3 class="product-name">Minimalist Leather Backpack</h3>
+              <div class="product-rating rating">
+                <span class="rating-stars">★★★★☆</span>
+                <span>4.6 (88)</span>
+              </div>
+              <div class="product-bottom">
+                <span class="price">$65.00</span>
+                <button class="btn btn-primary btn-sm" data-testid="add-to-cart">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 6: Water Bottle (Accessories) -->
+          <article class="product-card" data-testid="product-card" data-category="accessories">
+            <div class="product-image">
+              <span class="product-badge">Accessories</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M8 2h8v4H8z"></path>
+                <path d="M7 6h10v14a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2V6z"></path>
+                <line x1="7" y1="12" x2="17" y2="12"></line>
+              </svg>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Accessories</span>
+              <h3 class="product-name">Stainless Steel Water Bottle</h3>
+              <div class="product-rating rating">
+                <span class="rating-stars">★★★★★</span>
+                <span>4.8 (142)</span>
+              </div>
+              <div class="product-bottom">
+                <span class="price">$28.50</span>
+                <button class="btn btn-primary btn-sm" data-testid="add-to-cart">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =======================================================================
+       Footer
+       ======================================================================= -->
+  <footer class="footer" data-testid="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="nav-brand">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="9" cy="21" r="1"></circle>
+              <circle cx="20" cy="21" r="1"></circle>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
+            Nova<span>Cart</span>
+          </div>
+          <p>
+            Deterministic e-commerce target website designed specifically for visual regression testing using Playwright and Resemble.js.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">All Products</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Categories</h4>
+          <ul class="footer-links">
+            <li><a href="products.html">Electronics</a></li>
+            <li><a href="products.html">Fashion</a></li>
+            <li><a href="products.html">Accessories</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Customer Care</h4>
+          <ul class="footer-links">
+            <li><a href="contact.html">Help & FAQ</a></li>
+            <li><a href="contact.html">Shipping Details</a></li>
+            <li><a href="contact.html">Return Policy</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 NovaCart Demo Inc. All rights reserved.</span>
+        <span class="footer-testing-note">Target: Visual Regression Baseline</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

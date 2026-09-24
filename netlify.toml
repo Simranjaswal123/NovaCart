@@ -1,0 +1,13 @@
+# Netlify configuration for NovaCart
+# Optimized for Visual Regression Testing
+
+[build]
+  publish = "."
+
+# Ensure fresh responses for Playwright visual regression runs
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
